@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For My Ms.💙</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- MENU BUTTON (fixed top-right) -->
+  <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="sideMenu">☰</button>
+
+  <!-- SIDE MENU (slides from right) -->
+  <nav id="sideMenu" class="side-menu" aria-hidden="true" role="menu">
+    <a data-page="welcome" role="menuitem">Welcome</a>
+    <a data-page="letter" role="menuitem">Letter</a>
+    <a data-page="timeline" role="menuitem">Timeline</a>
+    <a data-page="gallery" role="menuitem">Gallery</a>
+    <a data-page="music" role="menuitem">Music</a>
+    <a data-page="reasons" role="menuitem">Reasons</a>
+    <a data-page="surprise" role="menuitem">Surprise</a>
+    <a data-page="minigame" role="menuitem">Mini Game</a>
+    <a data-page="promises" role="menuitem">Promises</a>
+    <a data-page="final" role="menuitem">Final</a>
+  </nav>
+
+  <!-- Main pages container -->
+  <main id="pagesContainer" class="pages-container" tabindex="0" aria-live="polite">
+
+    <!-- WELCOME -->
+    <section id="welcome" class="page show">
+      <div class="card center">
+        <h1 class="title">💙 Welcome My Love</h1>
+        <p class="lead">This little place is built just for you. Use the menu, swipe, or Next to navigate.</p>
+        <div class="controls">
+          <button class="btn primary" data-next="letter">Open Letter ❤️💌</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTER: contains four styles & switcher -->
+    <section id="letter" class="page">
+      <div class="card">
+        <h2 class="title">A Letter For You — pick a style</h2>
+
+        <div class="letter-switcher">
+          <button class="small-btn" data-style="envelope">Envelope</button>
+          <button class="small-btn" data-style="scroll">Scroll</button>
+          <button class="small-btn" data-style="card">Modern Card</button>
+          <button class="small-btn" data-style="floating">Floating Paper</button>
+        </div>
+
+        <div id="letterArea" class="letter-area">
+          <!-- Envelope style -->
+          <div class="letter-style" id="letter-envelope">
+            <div class="envelope" id="envelope">
+              <div class="flap"></div>
+              <div class="body">
+                <div class="stamp">A Letter for my Dear One 💌</div>
+              </div>
+            </div>
+            <div class="controls">
+              <button id="openEnvelope" class="btn secondary">Open Envelope</button>
+              <button class="btn" data-next="timeline">Next ➜</button>
+            </div>
+          </div>
+
+          <!-- Scroll style -->
+          <div class="letter-style hidden" id="letter-scroll">
+            <div class="scroll-wrap">
+              <div class="scroll-paper" id="scrollPaper">
+                <div id="scrollContent" class="scroll-content">
+                  <h3>My Dearest</h3>
+                  <p>Every day with you is a gift. Ninta koodea ulla each moment enki happiness aane tharunnea <br>
+                    Ms.<br>
+                    You make ordinary moments extraordinary..
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button id="unrollBtn" class="btn secondary">Unroll</button>
+              <button class="btn" data-next="timeline">Next ➜</button>
+            </div>
+          </div>
+
+          <!-- Modern card -->
+          <div class="letter-style hidden" id="letter-card">
+            <div class="glass-card letter-card">
+              <div id="cardContent">
+                <p class="muted">Click "Reveal" for a typewriter-style message.</p>
+              </div>
+            </div>
+            <div class="controls">
+              <button id="revealCard" class="btn secondary">Reveal</button>
+              <button class="btn" data-next="timeline">Next ➜</button>
+            </div>
+          </div>
+
+          <!-- Floating paper -->
+          <div class="letter-style hidden" id="letter-floating">
+            <div class="floating-wrap">
+              <div class="paper" id="floatingPaper">
+                <h3>To my one</h3>
+                <p id="floatingText">Hover or tap "Float" to make the paper sway and reveal the message.</p>
+              </div>
+            </div>
+            <div class="controls">
+              <button id="floatBtn" class="btn secondary">Float</button>
+              <button class="btn" data-next="timeline">Next ➜</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="page">
+      <div class="card">
+        <h2 class="title">Our Timeline</h2>
+        <div class="timeline-grid" id="timelineGrid">
+          <article class="timeline-card"><h3>Met</h3><p class="muted">It began in school, with one unexpected “Hi” that stayed in my heart.</p></article>
+          <article class="timeline-card"><h3>First Chat</h3><p class="muted">Our first real conversation began on Instagram 💬</p></article>
+          <article class="timeline-card"><h3>First Time You Held My Hand</h3><p class="muted">The first time you held my hand… I never wanted to let go.</p></article>
+          <article class="timeline-card"><h3>Memorable Day</h3><p class="muted">Seeing you in a saree for the first time is still one of my favorite memories.</p></article>
+          <article class="timeline-card"><h3>Future Dreams</h3><p class="muted">Being with you,<br> Ms. 😊
+          </p></article>
+        </div>
+        <div class="controls"><button class="btn" data-next="gallery">Next ➜</button></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="page">
+      <div class="card">
+        <h2 class="title">Photo Gallery</h2>
+        <div class="gallery-grid" id="galleryGrid">
+          <figure class="img-card" tabindex="0" data-caption="The first Meet">
+            <img src="Assets/meet.png" alt="">
+            <figcaption class="glass-caption">The first Meet</figcaption>
+          </figure>
+          <figure class="img-card" tabindex="0" data-caption="First time Holding your hand">
+            <img src="Assets/hand.png" alt="">
+            <figcaption class="glass-caption">First time Holding your hand</figcaption>
+          </figure>
+          <figure class="img-card" tabindex="0" data-caption="My First Kiss">
+            <img src="Assets/kiss.png" alt="">
+            <figcaption class="glass-caption">My First Kiss</figcaption>
+          </figure>
+          <figure class="img-card" tabindex="0" data-caption="My First Hug">
+            <img src="Assets/hug.png" alt="">
+            <figcaption class="glass-caption">My First Hug</figcaption>
+          </figure>
+        </div>
+        <div class="controls"><button class="btn" data-next="music">Next ➜</button></div>
+      </div>
+    </section>
+
+    <!-- MUSIC -->
+    <section id="music" class="page">
+      <div class="card center">
+        <h2 class="title">Music For You 💖</h2>
+        <div class="music-stack">
+          <iframe src="https://open.spotify.com/embed/track/0OLTYqD8FpjkLsxJmdWmgi" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/track/5OMUXgfXsSukZ0zxelpC3b" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/track/44LaY2y6wRRlSRjsqbKnuU" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/track/5G7pZ8G8NFvS1MQ9H4L7dC" allow="encrypted-media" loading="lazy"></iframe>
+        </div>
+        <div class="controls"><button class="btn" data-next="reasons">Next ➜</button></div>
+      </div>
+    </section>
+
+    <!-- REASONS -->
+    <section id="reasons" class="page">
+      <div class="card">
+        <h2 class="title">Reasons I Love You</h2>
+        <div class="reasons-grid">
+          <div class="reason-card glass-card"><h4>Smile</h4><p class="muted">Your smile brightens everything.</p></div>
+          <div class="reason-card glass-card"><h4>Kindness</h4><p class="muted">You care deeply for others.</p></div>
+          <div class="reason-card glass-card"><h4>Support</h4><p class="muted">You stand by my side.</p></div>
+          <div class="reason-card glass-card"><h4>Magic</h4><p class="muted">You make life feel special.</p></div>
+        </div>
+        <div class="controls"><button class="btn" data-next="surprise">Next ➜</button></div>
+      </div>
+    </section>
+
+    <!-- SURPRISE -->
+    <section id="surprise" class="page">
+      <div class="card center">
+        <h2 class="title">Surprise ✨</h2>
+        <div id="surpriseBox" class="surprise-box glass-card muted">Hidden surprise — tap reveal ✨</div>
+        <div class="controls">
+          <button id="revealBtn" class="btn secondary">Reveal</button>
+          <button class="btn" data-next="minigame">Next ➜</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINIGAME -->
+    <section id="minigame" class="page">
+      <div class="card center">
+        <h2 class="title">Find the Hearts</h2>
+        <p class="muted">Tap hearts until they all glow — then continue.</p>
+        <div class="game-grid" id="gameGrid">
+          <button class="heart-btn" data-index="0">💙</button>
+          <button class="heart-btn" data-index="1">💙</button>
+          <button class="heart-btn" data-index="2">💙</button>
+          <button class="heart-btn" data-index="3">💙</button>
+          <button class="heart-btn" data-index="4">💙</button>
+          <button class="heart-btn" data-index="5">💙</button>
+        </div>
+        <div id="winText" class="win-text" aria-hidden="true"></div>
+        <div class="controls"><button id="gameNext" class="btn hidden" data-next="promises">Continue ➜</button></div>
+      </div>
+    </section>
+
+    <!-- PROMISES -->
+    <section id="promises" class="page">
+      <div class="card">
+        <h2 class="title">My Promises</h2>
+        <div class="promise-list">
+          <div class="promise glass-card">💙 <p>I will always choose you.</p></div>
+          <div class="promise glass-card">💙 <p>I will support your dreams.</p></div>
+          <div class="promise glass-card">💙 <p>I will make time for us every day.</p></div>
+          <div class="promise glass-card">💙 <p>I promise to hold your hand through every high and low.</p></div>
+        </div>
+        <div class="controls"><button class="btn" data-next="final">Next ➜</button></div>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="final" class="page">
+      <div class="card center">
+        <h1 class="title final">I 💖 You Forever</h1>
+        <p class="muted">Thank you for being my everything. 💖💙</p>
+        <div class="controls"><button id="restartBtn" class="btn primary">Restart</button></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
